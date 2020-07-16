@@ -16,16 +16,19 @@ pool:
 
 steps:
 - task: DotNetCoreCLI@2
+  displayName: Restore packages
   inputs:
     command: 'restore'
-    projects: '**/.*.csproj'
+    projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
+  displayName: Build 
   inputs:
     command: 'build'
-    projects: '**/.*.csproj'
+    projects: '**/*.csproj'
 
 - task: NuGetCommand@2
+  displayName: Pack library
   inputs:
     command: pack
     packagesToPack: '**/*.csproj'
