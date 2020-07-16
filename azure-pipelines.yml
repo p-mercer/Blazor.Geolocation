@@ -7,9 +7,9 @@ trigger:
 - master
 
 variables:
-  Major: '1'
-  Minor: '0'
-  Patch: '0'
+  Major: '0'
+  Minor: '5'
+  Patch: '1'
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -18,12 +18,12 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
-    projects: '**/.*.sln'
+    projects: '**/.*.csproj'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '**/.*.sln'
+    projects: '**/.*.csproj'
 
 - task: NuGetCommand@2
   inputs:
