@@ -13,13 +13,12 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <AssemblyName>AspNetMonsters.Blazor.Geolocation</AssemblyName>
     <RootNamespace>AspNetMonsters.Blazor.Geolocation</RootNamespace>
-    <Version>0.5.0-preview1</Version>
+    <Version>0.5.0-preview3</Version>
 
     <DefaultItemExcludes>${DefaultItemExcludes};node_modules\**</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="package-lock.json" />
     <Content Remove="package.json" />
     <Content Remove="tsconfig.json" />
   </ItemGroup>
